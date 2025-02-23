@@ -1,0 +1,10 @@
+[default]
+workers = 24  # Número de workers (normalmente 2-4x número de cores CPU)
+keep_alive = 5
+ident = false  # Desabilita identificação do servidor para reduzir overhead
+limits = { json = "5MiB", forms = "5MiB" }
+
+[default.databases.sqlite_database]
+url = "E:/API/bigdata.db"
+pool_size = 50  # Aumenta o pool de conexões
+timeout = 5  # Timeout em segundos
